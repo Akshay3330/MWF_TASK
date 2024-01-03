@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="marks" id="marks">
+    <input type="button" name="btn" value="Get Result" id="btn">
+    <div class="result"></div>
+    <script>
+        document.getElementById("btn").addEventListener("click", function () {
+            var marks = document.getElementById("marks").value;
+            var dispDiv = document.getElementsByClassName("result")[0];
+            if (marks >= 33) {
+                dispDiv.innerHTML = "Pass";
+                dispDiv.style.color = "blue";
+            } else {
+                dispDiv.innerHTML = "Fail";
+                dispDiv.style.color = "red";
+            }
+        });
+    </script>
+</body>
+</html>

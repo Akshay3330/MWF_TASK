@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul>
+        <li>for</li>
+        <li>forwhile</li>
+        <li>foreach</li>
+        <li>forin</li>
+        <li>Dowhile</li>
+    </ul>
+    <script>
+          // Entry Controll Loop START
+        // for (declaration; codition; process/incre/decre)
+
+        for (let index = 0; index < 10; index++ ){
+            console.log("for Loop index",index);
+        }
+
+        var varForWhile = 0
+        while (varForWhile < 10) {
+            console.log("varForWhile ",varForWhile);
+            varForWhile++
+        }
+
+        
+        var marks = [90,80,92,85]
+        marks.forEach(kaipan => {
+            console.log("foreach : ",kaipan);
+        });
+     
+
+        var marks_object = {"phy":90,"Che":80,"bio":92,"eng":85}
+        for (const key in marks_object) {
+            console.log("for_in : ",key);
+            console.log("for_in : ",marks_object[key]);
+        }
+        for (const iterator of marks) {
+            console.log("for_of : ",iterator);
+        }
+
+        // Entry Controll Loop END 
+
+       // Exit Controll Loop Start 
+
+
+       var varForDoWhile =40
+        do {
+            varForDoWhile++
+            console.log("Do  while");
+        } while (varForWhile < 10);
+
+
+        // Exit Controll Loop END 
+        
+
+    </script>
+</body>
+</html>
