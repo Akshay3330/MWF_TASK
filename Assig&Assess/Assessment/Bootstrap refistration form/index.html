@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login Form</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS */
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+
+        .btn-login {
+            width: 100%;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 700;
+            font-size: 40px;
+            color: rgb(95, 94, 94);
+        }
+
+        .icon img {
+            width: 30%;
+            /* margin: 0 auto; */
+            border: 1px solid;
+            border-radius: 50%;
+            color: rgb(95, 94, 94);
+        }
+
+        .icon {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="icon">
+            <img src="twittericon.jpg" alt="">
+        </div>
+        <h2>Twitter</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" id="username" placeholder="Enter username">
+                <span id="usernameError" class="error-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter password">
+                <span id="passwordError" class="error-message"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-login">Login</button>
+        </form>
+    </div>
+
+    <script>
+        // Login form submission event
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Clear error messages
+            document.getElementById('usernameError').textContent = '';
+            document.getElementById('passwordError').textContent = '';
+
+            // Get input values
+            var username = document.getElementById('username').value.trim();
+            var password = document.getElementById('password').value.trim();
+
+            // Validate inputs
+            if (username === '') {
+                document.getElementById('usernameError').textContent = 'Please enter a username';
+                return;
+            }
+
+            if (password === '') {
+                document.getElementById('passwordError').textContent = 'Please enter a password';
+                return;
+            }
+
+            // Business logic: Perform login authentication
+            // ... (Add your own code here)
+
+            // Display success message
+            console.log('Login successful!');
+        });
+    </script>
+</body>
+
+</html>

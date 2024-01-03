@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>animate demo</title>
+    <style>
+        div {
+            position: absolute;
+            background-color: teal;
+            width: 90px;
+            height: 90px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn">Start</button>
+
+    <div class="block"></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script>
+        $("#btn").on("click", function () {
+            $(".block").animate({ "left": "+=250px" });
+        });
+
+    </script>
+
+</body>
+
+</html>
